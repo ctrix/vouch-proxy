@@ -17,7 +17,7 @@ install: build
 	@echo "Installing..."
 	mkdir -p debian/tmp/usr/sbin/
 	cp ./vouch-proxy debian/tmp/usr/sbin/
-	cp config/config.yml_example config.yml
+	cp config/config.yml_example config.yaml
 
 binary-arch: build install
 	dh_testdir

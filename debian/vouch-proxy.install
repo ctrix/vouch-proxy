@@ -1,2 +1,2 @@
 debian/tmp/usr/sbin/vouch-proxy  /usr/bin
-config.yml /etc/vouch-proxy/
+config.yaml /etc/vouch-proxy/
