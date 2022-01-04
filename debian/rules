@@ -16,9 +16,8 @@ build: configure
 install: build
 	@echo "Installing..."
 	mkdir -p debian/tmp/usr/sbin/
-	cp ./vouch-proxy   debian/tmp/usr/sbin/
-	#mkdir -p debian/tmp/etc/vouch-proxy
-	#cp config/config.yml_example   debian/tmp/etc/vouch-proxy/config.yml
+	cp ./vouch-proxy debian/tmp/usr/sbin/
+	cp config/config.yml_example config.yml
 
 binary-arch: build install
 	dh_testdir
@@ -29,7 +28,7 @@ binary-arch: build install
 	dh_link
 	dh_installdeb
 	dh_makeshlibs
-	dh_shlibdeps
+	#dh_shlibdeps
 	dh_gencontrol
 
 binary: binary-arch
