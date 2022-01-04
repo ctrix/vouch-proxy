@@ -5,8 +5,7 @@ After=network-online.target
 Wants=network-online.target
 
 [Service]
-User=nobody
-Group=nogroup
+DynamicUser=yes
 ExecStart=/usr/bin/vouch-proxy -config /etc/vouch-proxy/config.yaml
 TimeoutStopSec=5s
 KillSignal=SIGINT
