@@ -1,0 +1,11 @@
+Source: vouch-proxy
+Section: devel
+Priority: optional
+Maintainer: Massimo Cetra <mce@spamteq.com>
+Build-Depends: debhelper (>= 9), git
+Standards-Version: 3.9.8
+
+Package: vouch-proxy
+Architecture: linux-any
+Depends: 
+Description: An SSO solution for Nginx using the auth_request module

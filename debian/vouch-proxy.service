@@ -1,0 +1,16 @@
+[Unit]
+Description=Stolon proxy
+Documentation=https://github.com/sorintlab/stolon
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=nobody
+Group=nogroup
+EnvironmentFile=-/etc/vouch-proxy/config.yaml
+ExecStart=/usr/sbin/vouch-proxy $EXTRA_OPTS
+TimeoutStopSec=5s
+KillSignal=SIGINT
+
+[Install]
+WantedBy=multi-user.target
